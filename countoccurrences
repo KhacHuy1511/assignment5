@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class countoccurrences {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("nhap kich thuoc cua mang: ");
+        int n = scanner.nextInt();
+
+        int[] arr = new int[n];
+        System.out.println("nhap so phan tu cua mang:");
+        for (int i = 0; i < n; i++) {
+            arr[i] = scanner.nextInt();
+        }
+
+        System.out.print("nhap so phan tu can dem: ");
+        int elementToCount = scanner.nextInt();
+
+        int count = 0;
+        for (int i = 0; i < n; i++) {
+            if (arr[i] == elementToCount) {
+                count++;
+            }
+        }
+
+        System.out.println("so lan xuat hien cua " + elementToCount + ": " + count);
+    }
+}
